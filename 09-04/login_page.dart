@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,25 +47,31 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(padding: const EdgeInsets.all(30.0),width: 400.0, height: 300.0, color: Colors.lightBlue,
-            child: Column(
+            Container(width: 410.0, height: 330.0, color: Colors.lightBlue,child: Column(
               children: [
-                const Text(style: TextStyle(fontSize: 25,color: Colors.black),"LOGIN"),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Username',
-                  ),
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                  ),
-                ),
                 Container(width: 100, height: 30, color: Colors.lightBlue,),
-                ElevatedButton(onPressed: _incrementCounter,style: ElevatedButton.styleFrom(backgroundColor: Color(0xFF00FF00)),child: Text("Sign In"))
+                Container(width: 350.0, height: 290.0, color: Colors.lightBlue,
+                    child: Column(
+                      children: [
+                        const Text(style: TextStyle(fontSize: 25,color: Colors.red),"LOGIN"),
+                        TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Username',
+                          ),
+                        ),
+                        TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Password',
+                          ),
+                        ),
+                        Container(width: 100, height: 30, color: Colors.lightBlue,),
+                        ElevatedButton(onPressed: _incrementCounter,style: ElevatedButton.styleFrom(backgroundColor: Color(0xFF00FF00)),child: Text("Sign In"))
+                      ],
+                    )
+                )
               ],
-            )
-            )
+            ),),
+
           ],
         ),
       ),
