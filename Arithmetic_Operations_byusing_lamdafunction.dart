@@ -26,4 +26,6 @@ void main() {
 	print(div(x,y));
 	print(moddiv(x,y));
 
+	
+
 }
